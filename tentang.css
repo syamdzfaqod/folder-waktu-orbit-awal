@@ -1,0 +1,747 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&display=swap');
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0c29;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated Background Particles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(252, 176, 69, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(237, 110, 160, 0.3) 0%, transparent 50%);
+  animation: particle-move 15s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes particle-move {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Header */
+header {
+  position: relative;
+  z-index: 100;
+  padding: 2rem 5%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
+  }
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}/* Import Font dari Google Fonts untuk tampilan lebih modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset - Menghapus default margin/padding browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body - Background gradient gelap dengan efek mewah */
+body {
+  font-family: 'Poppins', sans-serif; /* Font modern */
+  background: #0f0c29; /* Warna dasar gelap */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Gradient ungu-biru gelap */
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Efek Partikel Bergerak di Background - Membuat tampilan lebih hidup */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 3 lingkaran gradient yang overlap untuk efek partikel */
+  background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(252, 176, 69, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(237, 110, 160, 0.3) 0%, transparent 50%);
+  animation: particle-move 15s ease-in-out infinite; /* Animasi bergerak pelan */
+  z-index: 0; /* Di belakang semua konten */
+}
+
+/* Animasi partikel - Membesar-kecil dan fade */
+@keyframes particle-move {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Header - Bagian atas dengan efek glass */
+header {
+  position: relative;
+  z-index: 100;
+  padding: 2rem 5%;
+  background: rgba(255, 255, 255, 0.05); /* Background semi-transparan */
+  backdrop-filter: blur(20px); /* Efek blur/kaca */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis tipis di bawah */
+  animation: fadeInDown 0.8s ease; /* Muncul dari atas */
+}
+
+/* Animasi header muncul dari atas */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Judul H1 - Gradient text dengan efek glow */
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); /* Gradient warna */
+  -webkit-background-clip: text; /* Gradient hanya pada text */
+  -webkit-text-fill-color: transparent; /* Text transparan untuk melihat gradient */
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px; /* Jarak antar huruf */
+  animation: glow 2s ease-in-out infinite; /* Efek cahaya berkedip */
+}
+
+/* Animasi glow - Cahaya bercahaya pada judul */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
+  }
+}
+
+/* Navigation List */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap; /* Wrap di layar kecil */
+}
+
+/* Menu Items - Muncul satu per satu dengan delay */
+nav ul li {
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards; /* Slide dari bawah */
+}
+
+/* Delay berbeda untuk setiap menu (efek stagger) */
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.4s; }
+nav ul li:nth-child(3) { animation-delay: 0.6s; }
+
+/* Animasi slide naik */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Link Navigation - Button dengan efek glass */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 50px; /* Bentuk pill/oval */
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Transisi smooth dengan bounce */
+  display: inline-block;
+}
+
+/* Border Gradient - Efek border gradient yang muncul saat hover */
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb); /* Gradient border */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /* Hanya border yang terlihat */
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+/* Hover Effect pada Link - Naik dan berubah warna */
+nav ul li a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Background gradient */
+  transform: translateY(-5px) scale(1.05); /* Naik dan membesar */
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); /* Shadow untuk depth */
+}
+
+nav ul li a:hover::before {
+  opacity: 1; /* Border gradient muncul */
+}
+
+/* Main Content Container */
+main {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 5%;
+  animation: fadeInScale 1s ease; /* Fade dan scale dari kecil */
+}
+
+/* Animasi fade dengan scale */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Section Card - Card dengan glass effect dan border berputar */
+section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08); /* Glass background */
+  backdrop-filter: blur(30px); /* Blur untuk glass effect */
+  padding: 3.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Border tipis */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Shadow untuk depth */
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Smooth transition */
+  overflow: hidden;
+}
+
+/* Border Berputar - Efek border gradient yang berputar */
+section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    rgba(102, 126, 234, 0.3), 
+    transparent 30%
+  ); /* Gradient melingkar */
+  animation: rotate 6s linear infinite; /* Berputar terus */
+}
+
+/* Layer dalam card untuk memisahkan konten dari border */
+section::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: rgba(15, 12, 41, 0.9); /* Background gelap */
+  border-radius: 28px;
+  z-index: 1;
+}
+
+/* Animasi rotasi border */
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover Effect pada Section - Card terangkat */
+section:hover {
+  transform: translateY(-10px); /* Naik ke atas */
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4); /* Shadow lebih besar */
+}
+
+/* Heading H2 - Gradient pink-red */
+section h2 {
+  position: relative;
+  z-index: 2; /* Di atas layer border */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* Gradient pink-red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 1s ease; /* Slide dari kiri */
+}
+
+/* Animasi slide dari kiri */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Paragraph - Text konten */
+section p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.15rem;
+  line-height: 2; /* Jarak antar baris */
+  color: rgba(255, 255, 255, 0.85); /* Putih semi-transparan */
+  text-align: justify;
+  animation: fadeInUp 1.2s ease 0.3s backwards; /* Muncul dari bawah dengan delay */
+}
+
+/* Animasi fade dari bawah */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Strong Text - Highlight nama dengan underline animation */
+section p strong {
+  color: #f093fb; /* Warna pink */
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Underline yang muncul saat hover */
+section p strong::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2); /* Gradient underline */
+  transition: width 0.3s ease;
+}
+
+/* Hover pada nama - Berubah warna dan membesar */
+section p strong:hover {
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+/* Underline melebar saat hover */
+section p strong:hover::after {
+  width: 100%;
+}
+
+/* Footer - Bagian bawah dengan glass effect */
+footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2.5rem 5%;
+  margin-top: 4rem;
+  background: rgba(255, 255, 255, 0.05); /* Glass background */
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Border atas */
+  animation: fadeInUp 1s ease; /* Muncul dari bawah */
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7); /* Putih transparan */
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Responsive Design - Menyesuaikan untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Judul lebih kecil */
+    letter-spacing: 1px;
+  }
+
+  nav ul {
+    gap: 1rem; /* Jarak menu lebih kecil */
+  }
+
+  nav ul li a {
+    padding: 10px 20px; /* Padding lebih kecil */
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 2rem auto;
+  }
+
+  section {
+    padding: 2rem 1.5rem; /* Padding lebih kecil */
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+}
+
+/* Custom Scrollbar - Scrollbar dengan gradient */
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0c29; /* Background track gelap */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #f093fb); /* Warna berbeda saat hover */
+}
+
+nav ul li {
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.4s; }
+nav ul li:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: inline-block;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+nav ul li a:hover::before {
+  opacity: 1;
+}
+
+/* Main Content */
+main {
+  position: relative;
+  z-index: 10;
+  max-width: 80%;
+  margin: 4rem auto;
+  padding: 0 5%;
+  animation: fadeInScale 1s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Section Card */
+section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  padding: 3.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    rgba(102, 126, 234, 0.3), 
+    transparent 30%
+  );
+  animation: rotate 6s linear infinite;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: rgba(15, 12, 41, 0.9);
+  border-radius: 28px;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+}
+
+section h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+section p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.15rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: justify;
+  animation: fadeInUp 1.2s ease 0.3s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section p strong {
+  color: #f093fb;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+section p strong::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+section p strong:hover {
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+section p strong:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2.5rem 5%;
+  margin-top: 4rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 2rem auto;
+  }
+
+  section {
+    padding: 2rem 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0c29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #f093fb);
+}

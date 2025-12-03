@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Monsieur+La+Doulaise&display=swap');
+
+p{
+font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+body{
+
+    background-color: #ccac1fa8;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    line-height: 1,6;
+}
+header{
+    background: linear-gradient(135deg,rgba(240, 192, 60, 0.082) ,rgb(199, 90, 1));
+    color : (rgb(236, 134, 1) ) ;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 2);
+}
+header h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1,7rem;
+}
+nav ul{
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+
+nav a{
+    text-decoration: 0;
+    color: rgb(94, 24, 24);
+    font-weight: 700;
+    transition: background 0.3 ease;
+}
+h2{
+    color: rgb(5, 49, 247);
+    font-weight: 700;
+    font-size: 1.6rem;
+
+}
+table{
+    border-collapse: collapse;
+    font-size: 1.3rem;
+}
+th,td{
+    text-align: center;
+}
+thead th{
+    background: rgb(206, 119, 5);
+    color: black;
+}
+
+
+tbody tr:nth-child(even) {background:rgb(134, 173, 55)}
+tbody tr:hover {background: rgb(151, 117, 6);}
+
+footer p{
+
+    background: linear-gradient(135deg,green,blue);
+    text-align: center;
+    color: rgb(245, 245, 245);
+}
+#about-me img{
+    box-shadow: 14px 12px gray;
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+
+
+}
+#contact a{
+    display: inline-block;
+    background: gray;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0,3s ease;
+    margin-top: 12px;
+}
+
+
+#contact a:hover{
+    background: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
